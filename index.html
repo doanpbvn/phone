@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>iOS Tool Hub</title>
+    <link rel="stylesheet" type="text/css" href="./function/styles.css">
+    <script src="./function/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" id="stylesheet">
+</head>
+<body>
+    <main class="container">
+    <h1 style="font-size: 20px; text-align: center;" id="time-title">iOS Support Buy Đoàn</h1>
+    <div class="sessions">
+        <div class="row"><img src="./image/backup.png"><h3>Đổi Máy BackUp</h3></div>
+        <textarea placeholder="Nhập: B62 DNPRW1CSHFLR (Mỗi máy 1 dòng)" id="deviceKeysInput"></textarea>
+        <div class="row"><a class="link-book" href="#" id="bookmarkletbackup">BackUp</a><a class="link-book" href="#" id="bookmarkletfakeclean">FakeClean</a>
+        </div>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/gift.png"><h3>Gift Trang</h3></div>
+        <fieldset><input type="gift_text" id="inputData" placeholder="Nhập Link Gift muốn lưu"><button onclick="accessURL()">Save data</button></fieldset>
+        <div class="select">
+            <label><input type="radio" name="data" value="gift_100" checked=""><img src="./image/gift.png">Gift 100</label><!-- Mặc định chọn -->
+            <label><input type="radio" name="data" value="gift_500"><img src="./image/gift.png">Gift 500 </label>
+            <label><input type="radio" name="data" value="gift_1000"><img src="./image/gift.png">Gift 1000</label>
+            <label><input type="radio" name="data" value="gift_khac"><img src="./image/gift.png">Gift Khác</label>
+        </div>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/downloads.png"><h3>Download File</h3></div>
+        <fieldset><a href="./dowload/data-full.zip" target="_blank">Download Data Settings</a></fieldset>
+        <fieldset><a href="https://trollstore.bio.link/" target="_blank">Add TrollStore IPhone</a></fieldset>
+        <fieldset><a href="https://havoc.app/package/trollfools/" target="_blank">Download TrollFools New</a></fieldset>
+        <fieldset><a href="https://github.com/opa334/TrollStore/" target="_blank">Download TrollStore PC-Mac</a></fieldset>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/appstore.png"><h3>ID Apple Japan</h3></div>
+        <fieldset><input value="derekdavis678@icloud.com Mnbv321321@"><button>Copy Icloud</button></fieldset>
+        <fieldset><input value="https://g4b.giftee.biz/456"><button>Copy Icloud</button></fieldset>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/pia.png"><h3>Pia VPN</h3></div>
+        <fieldset><input value="p5915880 9NXkqiNY5C"><button>Copy PIA 23/03</button></fieldset>
+        <fieldset><input value="p7874723 n9xkKJH2oX"><button>Copy PIA</button></fieldset>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/filza.png"><h3>File Filza</h3>
+        </div>
+        <fieldset><input value="/private/var/mobile/Library/Preferences/iFakePro/sessions"><button>URL Phôi</button></fieldset>
+        <fieldset><input value="/private/var/mobile/Library/ADManager"><button>URL Account</button></fieldset>
+    </div>
+    <div class="sessions">
+        <div class="row"><img src="./image/shortcut.png"><h3>Add Shortcut</h3></div>
+        <a class="row_a" href="https://www.icloud.com/shortcuts/057666329f324651aea27341a47bbb57"><img src="./image/shortcut.png">Add Shortcut Gift 100</a>
+        <a class="row_a" href="https://www.icloud.com/shortcuts/a25a875b0bf24a8b86df88122dd3f76e"><img src="./image/shortcut.png">Add Shortcut Gift 500</a>
+        <a class="row_a" href="https://www.icloud.com/shortcuts/76ab184da3754a6e82f43f59a9449491"><img src="./image/shortcut.png">Add Shortcut Gift 1000</a>
+        <div class="row"><img src="./image/tiktok.png"><h3>TikTok Lite</h3></div>
+        <a class="row_a" href="tiktok://"><img src="./image/tiktok.png">Play TikTok Lite</a>
+        <a class="row_a" href="https://licham365.com/clone/users/524/check"><img src="./image/tiktok.png">Play TikTok Lite 30p</a>
+        <a class="row_a" href="https://licham365.com/clone/users/529/check"><img src="./image/tiktok.png">Play TikTok Lite 60p</a>
+    </div>
+</main>
+    <footer style="text-align: center;">© 2025 - All Rights Reserved.</footer>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const currentDate = now.toLocaleDateString("vi-VN");
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById("time-title").textContent = `iOS Support (${timeString} - ${currentDate})`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
