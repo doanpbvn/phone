@@ -64,16 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parts = line.trim().split(' ');
                 const name = parts[0];
                 const key = parts.slice(1).join(' ');
-                if (name && key) {
-                    names.push(name);
-                    keys.push(`"${key}"`);
-                }});
+                if (name && key) {names.push(name);keys.push(`"${key}"`);}});
             const formattedKeys = keys.join(',');
             const formattedNames = JSON.stringify(names);
             let defaultName = names.length === 1 ? names[0] : `${names[0]} - ${names[names.length - 1]}`;
             let customName = prompt("Nhập tên backup tùy chỉnh:", defaultName);
-            if (!customName || customName.trim() === "") {
-                customName = defaultName;}
+            if (!customName || customName.trim() === "") {customName = defaultName;}
             const bookmarkletCode = `(async function() {
                 const deviceIDs = [${formattedKeys}];
                 const deviceNames = ${formattedNames};
@@ -126,10 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                 console.log("%c✅ Fake Xong. Check trên iPhone nhé!", "color: green; font-weight: bold;");
                 console.log("%c!--------------------------------!", "color: red; font-weight: bold;");}, 30000);}})();`;
-                
+            
             const codefakeclean = `javascript:(function(){const deviceIDs = [${formattedKeys}];(async function(){for (const deviceID of deviceIDs) {await fetch("https://ifake.pro/manager/device/"+deviceID+"/tools", {headers: { accept: "*/*", "content-type": "application/x-www-form-urlencoded; charset=UTF-8" },referrer: "https://ifake.pro/manager/device/" + deviceID,referrerPolicy: "strict-origin-when-cross-origin",body: "action=fake_clean",method: "POST",mode: "cors",credentials: "include"});}console.log("%c✅ Fake Xong. Check trên iPhone nhé!", "color: green; font-weight: bold;");})();})();`;
-
-
             // 📌 Mã hóa Bookmarklet
             const encodedBookmarklet = `javascript:${encodeURIComponent(bookmarkletCode)}`;
             bookmarkletbackup.href = encodedBookmarklet;
@@ -140,9 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
             bookmarkletbackup.href = "#";
             bookmarkletbackup.textContent = "Bạn chưa nhập Key kìa ^^";
             bookmarkletfakeclean.href = "#";
-            bookmarkletfakeclean.textContent = "Bạn chưa nhập Key kìa ^^";
-        }
-    }
+            bookmarkletfakeclean.textContent = "Bạn chưa nhập Key kìa ^^";}}
     deviceKeysInput.addEventListener('input', generateBookmarklet);
 });
-
