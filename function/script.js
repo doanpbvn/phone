@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("%c✅ Backup Xong !", "color: green; font-weight: bold;");
                 console.log("%c🧹 Bắt đầu Fake & Clean!", "color: blue; font-weight: bold;");
                 console.log("%c🧹 Đang Thực Hiện Fake & Clean!", "color: orange; font-weight: bold;");
-                performFakeClean(deviceIDs);}});
+                performFakeClean(deviceIDs);}console.log(\`%c⏳ Thời gian còn lại sau khi backup: \${backupCountdown}s\`, "color: orange; font-weight: bold;");});
                 async function performFakeClean(deviceIDs) {
                 for (const deviceID of deviceIDs) {
                 await fetch(\`https://ifake.pro/manager/device/\${deviceID}/tools\`, {
