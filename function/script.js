@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const d = sessions.html;
                 const e = d.match(/Folder:\\s*([A-F0-9-]+)/g);
                 let totalSessions = e ? e.length : 0;
-                const backupName = \`\${deviceName}-\${timestamp}-STT-\${totalSessions + 1}\`;
+                const backupName = \`\${deviceName}-\${timestamp}-\${totalSessions + 1}\`;
                 console.log(\`%c🔄 Tên Backup: \${backupName}".\`, "color: blue; font-weight: bold;");
                 await fetch(\`https://ifake.pro/manager/device/\${deviceID}/sessions\`, {
                 headers: { accept: "*/*", "content-type": "application/x-www-form-urlencoded; charset=UTF-8" },
