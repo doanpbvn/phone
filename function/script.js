@@ -1,10 +1,25 @@
+// Style.css
+function updateClock() {
+    const now = new Date();
+    const currentDate = now.toLocaleDateString("vi-VN");
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById("time-title").textContent = `iOS Support (${timeString} - ${currentDate})`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
 // button Copy
 document.addEventListener('click', e => {
     if (e.target.tagName === 'BUTTON') {
         const input = e.target.previousElementSibling;
         if (input?.tagName === 'INPUT') {
             navigator.clipboard.writeText(input.value).catch(console.error);
-        }}});
+        }
+    }
+});
 
 // Gift Tiktok
 function accessURL() {
@@ -34,7 +49,6 @@ function accessURL() {
             alert('Có lỗi xảy ra, vui lòng thử lại!'); // Thông báo khi có lỗi
         });
 }
-
 // JavaScript Backup
 document.addEventListener('DOMContentLoaded', () => {
     const deviceKeysInput = document.getElementById('deviceKeysInput');
@@ -80,6 +94,5 @@ document.addEventListener('DOMContentLoaded', () => {
             bookmarkletfakeclean.textContent = "Bạn chưa nhập Key kìa ^^";
         }
     }
-
     deviceKeysInput.addEventListener('input', generateBookmarklet);
 });
