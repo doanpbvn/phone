@@ -67,7 +67,7 @@ a:hover, .link:hover, button:hover, .link-book:hover {
   color: black;
   text-align: center;
 }
-img{
+.icon {
   max-width: 25px;
   height: auto;
   margin-right: 5px;
