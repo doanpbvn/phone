@@ -15,12 +15,6 @@ body {
   padding: 0;
 }
 
-.main {
-  padding: 5px;
-  display: flex;
-  align-items: stretch;
-}
-
 .sessions{
   width: calc(100% - 20px);
   border: 1px solid #ccc;
@@ -29,58 +23,19 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-a{
-  width: calc(100% - 20px);
-  margin: 10px;
-  display: block;
-  text-decoration: none;
-  background-color: #fff;
-  padding: 5px;
-  color: black;
-}
-a:hover, .link:hover, button:hover, .link-book:hover {
-  border: 5px;
-  background-color: #dcffff;
-  color: blue;
-}
 
 .row {
-  background: #fff;
   display: flex;
   margin: 5px auto;
   align-items: center;
   padding: 5px;
-}
-.row_a {
-  background: #fff;
-  display: flex;
-  margin: 5px auto;
-  align-items: center;
-  padding: 5px;
-  border: 1px dashed #ccc;
-}
-
-.link-book {
-  width: calc(50% - 10px);
-  padding: 5px;
-  border: 1px dashed #ccc;
-  display: block;
-  margin: 0 auto;
-  color: black;
-  text-align: center;
-}
-img{
-  max-width: 25px;
-  height: auto;
-  margin-right: 5px;
 }
 
 textarea{
-  padding: 5px;
+  padding: 10px;
   width: calc(100% - 20px);
   height: 80px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
   resize: none;
   display: block;
   margin: 10px auto;
@@ -94,9 +49,13 @@ fieldset {
   margin: 15px auto 15px;
 }
 
-button{
-  width: calc(30%);
-} 
+img{
+  max-width: 25px;
+  height: auto;
+  margin-right: 5px;
+}
+
+button{width: calc(30%);} 
 
 input {
   width: 70%;
@@ -104,6 +63,64 @@ input {
   overflow: hidden;
   padding: 0 10px;
   height: 30px;
+}
+
+a{
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px;
+  color: black;
+}
+
+a:hover, .link:hover, button:hover, .link-book:hover {
+  border: 5px;
+  background-color: #dcffff;
+  color: blue;
+}
+
+.row_src {
+  display: flex;
+  margin: 5px auto;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.link-book {
+  width: calc(50% - 10px);
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.select label {
+  width: calc(100% - 50px);
+  align-items: center;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  margin: 0 auto 15px;
+}
+
+.select label:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+fieldset input[type="gift_text"] {
+  height: 40px;
+}
+
+.select input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #007bff;
 }
 
 /* Chỉ áp dụng màu nền trên điện thoại (màn hình dưới 768px) */
@@ -120,32 +137,4 @@ input {
   input, textarea {
     font-size: 16px; /* Safari không tự động zoom nếu font ≥ 16px */
 }
-}
-
-.select {
-  display: flex;
-  flex-direction: column;
-}
-
-.select label {
-  width: calc(100% - 50px);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  transition: 0.3s ease;
-  background: #fff;
-  border: 1px solid #ccc;
-  margin: 0 auto 15px;
-}
-
-.select label:hover {
-  background-color: #f5f5f5;
-  border-color: #999;
-}
-
-.select input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  accent-color: #007bff; /* Màu radio khi chọn (hỗ trợ trên Chrome, Edge) */
 }
