@@ -33,18 +33,15 @@ a{
   width: calc(100% - 20px);
   display: block;
   text-decoration: none;
-  background-color: #fff;
   padding: 5px;
   color: black;
 }
 a:hover, .link:hover, button:hover, .link-book:hover {
   border: 5px;
-  background-color: #dcffff;
   color: blue;
 }
 
 .row {
-  background: #fff;
   display: flex;
   margin: 5px auto;
   align-items: center;
@@ -61,16 +58,20 @@ a:hover, .link:hover, button:hover, .link-book:hover {
 .link-book {
   width: calc(50% - 10px);
   padding: 5px;
-  border: 1px dashed #ccc;
+  border: 1px solid #ccc;
   display: block;
   margin: 0 auto;
-  color: black;
-  text-align: center;
+}
+img{
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .icon {
-  max-width: 25px;
-  height: auto;
-  margin-right: 5px;
+  max-width: 30px;
+  padding-right: 5px ;
+  margin: 0;
 }
 
 textarea{
@@ -101,7 +102,7 @@ input {
   white-space: nowrap;
   overflow: hidden;
   padding: 0 10px;
-  height: 30px;
+  height: 35px;
 }
 
 /* Chỉ áp dụng màu nền trên điện thoại (màn hình dưới 768px) */
@@ -119,31 +120,26 @@ input {
     font-size: 16px; /* Safari không tự động zoom nếu font ≥ 16px */
 }
 }
-
-.select {
-  display: flex;
-  flex-direction: column;
+.columns {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
+  padding: 5px 10px;
 }
 
-.select label {
-  width: calc(100% - 50px);
+.columns label {
+  width: calc(100% - 20px);
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  transition: 0.3s ease;
-  background: #fff;
+  gap: 8px;
   border: 1px solid #ccc;
-  margin: 0 auto 15px;
+  margin: 5px;
+  padding: 5px 10px;
+  
 }
 
-.select label:hover {
-  background-color: #f5f5f5;
-  border-color: #999;
-}
-
-.select input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  accent-color: #007bff; /* Màu radio khi chọn (hỗ trợ trên Chrome, Edge) */
+.columns input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #007bff;
 }
