@@ -13,24 +13,27 @@
     <main>
         <div class="sessions">
             <h1 style="font-size: 20px; text-align: center;margin-top: 10px;" id="time-title">iOS Support Buy Đoàn</h1>
-            <img style="width: 300px; display: block; margin: auto;" src="./image/qr.png">
+            <img style="width: 300px; height: auto;" src="./image/qr.png">
+            <fieldset><a style="text-align: center;" href="./data.txt" target="_blank">Cá Nhân</a></fieldset>
         </div>
         <div class="sessions">
             <div class="row"><img class="icon" src="./image/backup.png"><h3>Đổi Máy BackUp</h3></div>
             <textarea placeholder="Nhập: B62 DNPRW1CSHFLR (Mỗi máy 1 dòng)" id="deviceKeysInput"></textarea>
-            <div class="row"><a class="link-book" href="#" id="bookmarkletbackup">BackUp</a><a class="link-book" href="#" id="bookmarkletfakeclean">FakeClean</a></div>
-                <fieldset><a style="text-align: center;" href="./data.txt" target="_blank">Data</a></fieldset>
+            <div class="row">
+                <a class="link-book" href="#" id="bookmarkletbackup">BackUp</a>
+                <a class="link-book" href="#" id="bookmarkletfakeclean">FakeClean</a>
+            </div>
         </div>
         <div class="sessions">
             <div class="row"><img class="icon" src="./image/gift.png"><h3>Gift Trang</h3></div>
-            <fieldset><input type="gift_text" id="inputData" placeholder="Nhập Link Gift muốn lưu"><button onclick="accessURL()">Save data</button></fieldset>
-            <div class="select">
-                    <label><input type="radio" name="data" value="gift_100" checked=""><img class="icon" src="./image/gift.png">Gift 100</label><!-- Mặc định chọn -->
-                    <label><input type="radio" name="data" value="gift_500"><img class="icon" src="./image/gift.png">Gift 500 </label>
-                    <label><input type="radio" name="data" value="gift_1000"><img class="icon" src="./image/gift.png">Gift 1000</label>
-                    <label><input type="radio" name="data" value="gift_khac"><img class="icon" src="./image/gift.png">Gift Khác</label>
-                    <label><input type="radio" name="data" value="gift_user"><img class="icon" src="./image/gift.png">Gift Lỗi URL</label>
-                    <label><input type="radio" name="data" value="gift_faq"><img class="icon" src="./image/gift.png">Account FAQ</label>
+            <fieldset><input type="gift_text" id="inputData" placeholder="Nhập Link Gift muốn lưu"><button onclick="accessURL()">Save Gift</button></fieldset>
+            <div class="columns">
+                    <label><input type="radio" name="data" value="gift_100" checked=""><img class="icon" style="width: 25px;" src="./image/gift.png">Gift 100</label><!-- Mặc định chọn -->
+                    <label><input type="radio" name="data" value="gift_khac"><img class="icon" style="width: 25px;" src="./image/gift.png">Gift Khác</label>
+                    <label><input type="radio" name="data" value="gift_500"><img class="icon" style="width: 25px;" src="./image/gift.png">Gift 500 </label>
+                    <label><input type="radio" name="data" value="gift_user"><img class="icon" style="width: 25px;" src="./image/gift.png">Gift Lỗi URL</label>
+                    <label><input type="radio" name="data" value="gift_1000"><img class="icon" style="width: 25px;" src="./image/gift.png">Gift 1000</label>
+                    <label><input type="radio" name="data" value="gift_faq"><img class="icon" style="width: 25px;" src="./image/gift.png">Account FAQ</label>
             </div>
         </div>
         <div class="sessions">
@@ -55,7 +58,7 @@
             <fieldset><input value="/private/var/mobile/Library/Preferences/iFakePro/sessions"><button>Copy Text</button></fieldset>
             <fieldset><input value="/private/var/mobile/Library/ADManager"><button>Copy Text</button></fieldset>
         </div>
-        <div class="sessions">
+        <nav class="sessions">
             <div class="row"><img class="icon" src="./image/shortcut.png"><h3>Add Shortcut</h3></div>
             <a class="row_src" href="https://www.icloud.com/shortcuts/057666329f324651aea27341a47bbb57"><img class="icon" src="./image/shortcut.png">Add Shortcut Gift 100</a>
             <a class="row_src" href="https://www.icloud.com/shortcuts/a25a875b0bf24a8b86df88122dd3f76e"><img class="icon" src="./image/shortcut.png">Add Shortcut Gift 500</a>
@@ -64,8 +67,8 @@
             <a class="row_src" href="tiktok://"><img class="icon" src="./image/tiktok.png">Play TikTok Lite</a>
             <a class="row_src" href="https://licham365.com/clone/users/524/check"><img class="icon" src="./image/tiktok.png">Play TikTok Lite 30p</a>
             <a class="row_src" href="https://licham365.com/clone/users/529/check"><img class="icon" src="./image/tiktok.png">Play TikTok Lite 60p</a>
-        </div>
+        </nav>
     </main>
-    <footer style="text-align: center;">© 2025 - All Rights Reserved.</footer>
+    <footer style="text-align: center;"> &copy; 2025 - DoanPB - All Rights Reserved.</footer>
 </body>
 </html>
