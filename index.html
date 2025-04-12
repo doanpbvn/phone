@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="./function/styles.css">
     <script src="./function/script.js" defer></script>
     <link rel="stylesheet" type="text/css" id="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 </head>
 <body>
     <main>
         <div class="sessions">
             <h1 style="font-size: 20px; text-align: center;margin-top: 10px;" id="time-title">iOS Support Buy Đoàn</h1>
-            <img style="width: 300px; height: auto;" src="./image/qr.png">
+            <div id="qrcode"></div>
             <a class="row_src" href="http://localhost/data.html">Cá Nhân</a>
             <a class="row_src" href="https://doanpbvn.github.io/gift/"><img class="icon" src="./image/gift_1.png">Lưu Gift New</a>
         </div>
@@ -79,6 +80,10 @@
             <a class="row_src" href="https://tigisoftware.com/repo/"><img class="icon" src="https://getsileo.app/img/icon.png">Add Tigisoftware Sileo</a> 
         </nav>
     </main>
+        <script>
+        var qrText = "https://doanpbvn.github.io/phone";
+        new QRCode(document.getElementById("qrcode"), qrText);
+      </script>
     <footer style="text-align: center;"> &copy; 2025 - DoanPB - All Rights Reserved.</footer>
 </body>
 </html>
