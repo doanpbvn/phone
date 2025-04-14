@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok Info Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #output {
+      margin-top: 30px;
+      font-size: 18px;
+      font-family: monospace;
+      color: #333;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>TikTok Lite Generator 🎵</h2>
+
+  <button onclick="copyRandomUsername()">Sao chép Username ngẫu nhiên</button>
+  <button onclick="copyRandomJapaneseDesc()">Sao chép Mô tả tiếng Nhật ngẫu nhiên</button>
+
+  <div id="output"></div>
+
+  <script>
+    function getRandomElement(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function getRandomUsername() {
+      const adjectives = ["cool", "happy", "dark", "sunny", "mystic", "fast", "shy", "lucky", "sweet", "silent"];
+      const nouns = ["ninja", "cat", "fox", "star", "wave", "wind", "breeze", "dream", "rider", "dancer"];
+      const numDigits = Math.floor(Math.random() * 3) + 2; // 2-4 chữ số
+      const number = Math.floor(Math.random() * Math.pow(10, numDigits)).toString().padStart(numDigits, '0');
+      return `${getRandomElement(adjectives)}_${getRandomElement(nouns)}_${number}`;
+    }
+
+    const phrases = [
+      "毎日が特別な日✨",
+      "笑顔を届けたい😊",
+      "今日も全力で楽しもう🎉",
+      "音楽が私のすべて🎶",
+      "かわいいが止まらない🐾",
+      "一緒に踊ろう💃",
+      "フォローしてくれたら嬉しい🌟",
+      "夢に向かって進む💫",
+      "いつもありがとう🤍",
+      "私の世界へようこそ🌈",
+      "今日のOOTDチェックしてね👗",
+      "推ししか勝たん🔥",
+      "撮影楽しかった📸",
+      "いいね＆シェアよろしくね👍",
+      "まだまだ頑張ります💪",
+      "一日一笑😄",
+      "コメント全部見てるよ👀",
+      "今日はどんな日だった？🌤️",
+      "新しい挑戦始めました🔥",
+      "元気いっぱいで配信中📱",
+      "ちょっとだけ覗いてみて👀",
+      "この瞬間が大好き💕",
+      "夜風が気持ちいい🌙",
+      "眠れない夜に🌃",
+      "カフェ巡りが趣味☕",
+      "君の1likeが励みになる💖",
+      "踊らずにはいられない🕺",
+      "日常を切り取ってみた📷",
+      "心のままに投稿中🫶",
+      "話しかけてくれたら嬉しい💬",
+      "今日の空、きれいだったよ☁️",
+      "癒しをお届けします🍀",
+      "最近ハマってること🤫",
+      "自分らしく生きる🌸",
+      "一緒に盛り上がろう！🥳",
+      "推しに全力投球⚾",
+      "今日もゆるゆる配信中🐌",
+      "TikTokが日課📆",
+      "君に届け、この想い💌",
+      "気軽にフォローしてね🙌",
+    ];
+
+    function getRandomJapanesePhrase() {
+      const first = getRandomElement(phrases);
+      const second = getRandomElement(phrases);
+      return first === second ? first : `${first} ${second}`;
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        document.getElementById("output").textContent = `Đã sao chép:\n${text}`;
+      }).catch(err => {
+        console.error("Lỗi sao chép:", err);
+      });
+    }
+
+    function copyRandomUsername() {
+      const username = getRandomUsername();
+      copyToClipboard(username);
+    }
+
+    function copyRandomJapaneseDesc() {
+      const description = getRandomJapanesePhrase();
+      copyToClipboard(description);
+    }
+  </script>
+
+</body>
+</html>
